@@ -1,0 +1,36 @@
+/* styles.scss */
+
+/* Gaya untuk scrollbar di semua elemen */
+::-webkit-scrollbar {
+    width: 10px; /* Lebar scrollbar vertikal */
+    height: 10px; /* Tinggi scrollbar horizontal */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Warna latar belakang track */
+    border-radius: 10px; /* Membulatkan track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Warna thumb */
+    border-radius: 10px; /* Membulatkan thumb */
+    opacity: 0; /* Sembunyikan scrollbar secara default */
+    transition: opacity 0.3s; /* Animasi transisi */
+  }
+  
+  .scrollable-element {
+    max-height: 300px; /* Tinggi maksimum elemen */
+    max-width: 100%; /* Lebar maksimum elemen */
+    overflow-y: auto; /* Menampilkan scrollbar vertikal */
+    overflow-x: auto; /* Menampilkan scrollbar horizontal */
+    padding: 10px; /* Tambahan padding jika diperlukan */
+    position: relative;
+  
+    /* Menampilkan scrollbar saat scrolling */
+    &.show-scrollbar {
+      ::-webkit-scrollbar-thumb {
+        opacity: 1; /* Tampilkan scrollbar */
+      }
+    }
+  }
+  
